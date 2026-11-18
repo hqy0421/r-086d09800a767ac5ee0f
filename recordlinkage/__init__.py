@@ -22,6 +22,10 @@ from recordlinkage.measures import fscore
 from recordlinkage.network import OneToOneLinking
 from recordlinkage.network import OneToManyLinking
 from recordlinkage.network import ConnectedComponents
+from recordlinkage.mdm import MDMError
+from recordlinkage.mdm import MDMOperationError
+from recordlinkage.mdm import MDMPublishError
+from recordlinkage.mdm import MDMManager
 from recordlinkage import rl_logging as logging
 from recordlinkage.annotation import read_annotation_file
 from recordlinkage.annotation import write_annotation_file
@@ -80,4 +84,8 @@ __all__ = [
     "OneToOneLinking",
     "OneToManyLinking",
     "ConnectedComponents",
+    "MDMManager",
+    "MDMError",
+    "MDMOperationError",
+    "MDMPublishError",
 ]

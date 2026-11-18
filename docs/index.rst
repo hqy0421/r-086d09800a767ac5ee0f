@@ -26,6 +26,7 @@ All you need to start linking records.
 	ref-classifiers
 	ref-evaluation
 	ref-datasets
+	ref-mdm
 	ref-misc
 
 .. toctree::

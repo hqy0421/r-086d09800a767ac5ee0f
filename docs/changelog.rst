@@ -2,6 +2,19 @@
 Release notes
 *************
 
+Unreleased
+==========
+
+- Add ``recordlinkage.MDMManager``: SQLite persisted, multi-source
+  incremental master data merging. Batches of insert/update/delete
+  operations identified by ``(source, record_id)`` are linked with the
+  configured Index, Compare and a frozen fitted probability model,
+  thresholded into connections and published atomically as generations.
+  Merges keep the smallest old anchor entity id, splits inherit through
+  the anchor subgroup, isolated records become singleton entities, and
+  fact references are rebound to the current entity (``NULL`` when the
+  source record is deleted) without changing fact payloads.
+
 Version 0.15
 ============
 
